@@ -13,7 +13,7 @@ This should give:
 
 ### Fine-tuning
 
-Get our pre-trained checkpoints from [here]().
+Get our pre-trained checkpoints from [here](https://drive.google.com/file/d/1YwcTJvASZJvn2LxyZZG4PcgXaBCKEv_4/view?usp=sharing).
 
 To fine-tune our pre-trained ViT-Base with **single-node training**, run the following on 1 node with 8 GPUs:
 ```
