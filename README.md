@@ -3,7 +3,7 @@
 
 ![SupMAE](misc/supmae.png "SupMAE")
 
-This is a offical PyTorch/GPU implementation of the paper [SupMAE: Supervised Masked Autoencoders Are Efficient Vision Learners]().
+This is a offical PyTorch/GPU implementation of the paper [SupMAE: Supervised Masked Autoencoders Are Efficient Vision Learners](https://arxiv.org/abs/2205.14540).
 
 * This repo is a modification on the [MAE repo](https://github.com/facebookresearch/mae). Installation and preparation follow that repo.
 
@@ -46,7 +46,12 @@ The fine-tuning instruction is in [FINETUNE.md](FINETUNE.md).
 ### Citation
 If you find this repository helpful, please consider citing our work
 ```
-TBD
+@article{liang2022supmae,
+  title={SupMAE: Supervised Masked Autoencoders Are Efficient Vision Learners},
+  author={Liang, Feng and Li, Yangguang and Marculescu, Diana},
+  journal={arXiv preprint arXiv:2205.14540},
+  year={2022}
+}
 ```
 
 

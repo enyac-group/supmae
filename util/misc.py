@@ -296,7 +296,8 @@ def save_model(args, epoch, model, model_without_ddp, optimizer, loss_scaler, ac
     output_dir = Path(args.output_dir)
     epoch_name = str(epoch)
     if loss_scaler is not None:
-        checkpoint_paths = [output_dir / ('checkpoint-%s.pth' % epoch_name)]
+        # checkpoint_paths = [output_dir / ('checkpoint-%s.pth' % epoch_name)]
+        checkpoint_paths = [output_dir / 'checkpoint.pth']
         for checkpoint_path in checkpoint_paths:
             to_save = {
                 'model': model_without_ddp.state_dict(),
