@@ -13,10 +13,23 @@ This is a offical PyTorch/GPU implementation of the paper [SupMAE: Supervised Ma
 
 Supervised MAE (SupMAE) is an extension of MAE by adding a supervised classification branch. SupMAE is efficient and can achieve comparable performance with MAE using only 30% compute. SupMAE’s robustness on ImageNet variants and transfer learning performance outperforms MAE and standard supervised pre-training counterparts. 
 
-#### :one: Training Efficiency
+#### :one: SupMAE is more training efficient
 
 
 ![SupMAE Performance](misc/supmae_perf.png "SupMAE Performance")
+
+#### :two: SupMAE model is more robust
+
+| dataset        | MAE  | DeiT | SupMAE(Ours) |
+|----------------|------|------|--------------|
+| IN-Corruption ↓ | 51.7 | 47.4 | 48.1         |
+| IN-Adversarial | 35.9 | 27.9 | 35.5         |
+| IN-Rendition   | 48.3 | 45.3 | 51.0         |
+| IN-Sketch      | 34.5 | 32.0 | 36.0         |
+| Score          | 41.8 | 39.5 | 43.6         |
+
+Note: The score is measured by the averaging metric across four variants (we use ’100 - error’ for the IN-Corruption performance metric).
+
 
 ### Abstract
 
