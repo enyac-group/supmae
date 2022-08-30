@@ -30,6 +30,33 @@ Supervised MAE (SupMAE) is an extension of MAE by adding a supervised classifica
 
 Note: The score is measured by the averaging metric across four variants (we use ’100 - error’ for the IN-Corruption performance metric).
 
+#### :three: SupMAE learns more transferable features
+
+##### Few-shot learning on 20 classification datasets
+
+
+|              | Checkpoint   | Method    | 5-shot       | 20-shot      | 50-shot      |
+|--------------|--------------|-----------|--------------|--------------|--------------|
+| Linear Probe | MAE          | Self-Sup. | 33.37 ± 1.98 | 48.03 ± 2.70 | 58.26 ± 0.84 |
+| Linear Probe | MoCo-v3      | Self-Sup. | 50.17 ± 3.43 | 61.99 ± 2.51 | 69.71 ± 1.03 |
+| Linear Probe | SupMAE(Ours) | Sup.      | 47.97 ± 0.44 | 60.86 ± 0.31 | 66.68 ± 0.47 |
+| Fine-tune    | MAE          | Self-Sup. | 36.10 ± 3.25 | 54.13 ± 3.86 | 65.86 ± 2.42 |
+| Fine-tune    | MoCo-v3      | Self-Sup. | 39.30 ± 3.84 | 58.75 ± 5.55 | 70.33 ± 1.64 |
+| Fine-tune    | SupMAE(Ours) | Sup.      | 46.76 ± 0.12 | 64.61 ± 0.82 | 71.71 ± 0.66 |
+
+Note: We are using the [Elevater_Toolkit_IC](https://github.com/Computer-Vision-in-the-Wild/Elevater_Toolkit_IC) (HIGHLY recommendation)!
+
+
+##### Semantic segmentation with ADE-20k
+
+
+| method           | mIoU | aAcc | mAcc |
+|------------------|------|------|------|
+| Naive supervised | 47.4 | -    | -    |
+| MAE              | 48.6 | 82.8 | 59.4 |
+| SupMAE (ours)    | 49.0 | 82.7 | 60.2 |
+
+Note: We are using [mmsegmentaion](https://github.com/open-mmlab/mmsegmentation/tree/master/configs/mae)
 
 ### Abstract
 
