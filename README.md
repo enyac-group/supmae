@@ -11,13 +11,16 @@ This is a offical PyTorch/GPU implementation of the paper [SupMAE: Supervised Ma
 
 ### TL;DR
 
-Supervised MAE (SupMAE) is an extension of MAE by adding a supervised classification branch. SupMAE is efficient and can achieve comparable performance with MAE using only 30% compute.
+Supervised MAE (SupMAE) is an extension of MAE by adding a supervised classification branch. SupMAE is efficient and can achieve comparable performance with MAE using only 30% compute. SupMAE’s robustness on ImageNet variants and transfer learning performance outperforms MAE and standard supervised pre-training counterparts. 
+
+#### :one: Training Efficiency
+
 
 ![SupMAE Performance](misc/supmae_perf.png "SupMAE Performance")
 
 ### Abstract
 
-Self-supervised Masked Autoencoders (MAE) are emerging as a new pre-training paradigm in computer vision. MAE learns semantics implicitly via reconstructing local patches, requiring thousands of pre-training epochs to achieve favorable performance. This paper incorporates explicit supervision, i.e., golden labels, into the MAE framework. The proposed Supervised MAE (SupMAE) only exploits a visible subset of image patches for classification, unlike the standard supervised pre-training where all image patches are used. SupMAE is efficient and can achieve comparable performance with MAE using only 30% compute when evaluated on ImageNet with the ViT-B/16 model. Detailed ablation studies are conducted to verify the proposed components.
+Recently, self-supervised Masked Autoencoders (MAE) have attracted unprecedented attention for their impressive representation learning ability. However, the pretext task, Masked Image Modeling (MIM), reconstructs the missing local patches, lacking the global understanding of the image. This paper extends MAE to a fully-supervised setting by adding a supervised classification branch, thereby enabling MAE to effectively learn global features from golden labels. The proposed Supervised MAE (SupMAE) only exploits a visible subset of image patches for classification, unlike the standard supervised pre-training where all image patches are used. Through experiments, we demonstrate that not only is SupMAE more training efficient but also it learns more robust and transferable features.
 
 ### Catalog
 
